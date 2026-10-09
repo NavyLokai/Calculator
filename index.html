@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern calculator web app with history, keyboard support and dark mode." />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="calculator" aria-label="Calculator">
+      <div class="top-bar">
+        <h1>Calculator</h1>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">🌙 Dark</button>
+      </div>
+
+      <div class="display" role="status" aria-live="polite">
+        <div class="previous" id="previous"></div>
+        <div class="current" id="current">0</div>
+      </div>
+
+      <div class="keys">
+        <button class="fn" data-action="clear" aria-label="All clear">AC</button>
+        <button class="fn" data-action="delete" aria-label="Delete last digit">⌫</button>
+        <button class="fn" data-action="percent" aria-label="Percent">%</button>
+        <button class="op" data-operator="÷" aria-label="Divide">÷</button>
+
+        <button class="fn" data-action="sqrt" aria-label="Square root">√</button>
+        <button class="fn" data-action="square" aria-label="Square">x²</button>
+        <button class="fn" data-action="negate" aria-label="Toggle positive or negative">±</button>
+        <button class="op" data-operator="×" aria-label="Multiply">×</button>
+
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-number="9">9</button>
+        <button class="op" data-operator="−" aria-label="Subtract">−</button>
+
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-number="6">6</button>
+        <button class="op" data-operator="+" aria-label="Add">+</button>
+
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-number="3">3</button>
+        <button class="equals" data-action="equals" aria-label="Equals" style="grid-row: span 2;">=</button>
+
+        <button class="zero" data-number="0">0</button>
+        <button data-action="decimal" aria-label="Decimal point">.</button>
+      </div>
+    </section>
+
+    <aside class="history" aria-label="Calculation history">
+      <div class="history-header">
+        <h2>History</h2>
+        <button class="icon-btn" id="clearHistory" aria-label="Clear history">Clear</button>
+      </div>
+      <ul id="historyList"></ul>
+    </aside>
+
+    <footer>Keyboard: 0–9 · + − * / · Enter = · Backspace ⌫ · Esc AC</footer>
+  </main>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>
