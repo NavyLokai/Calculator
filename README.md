@@ -2,7 +2,7 @@
 
 A modern, responsive calculator web app built with plain HTML, CSS and JavaScript. No frameworks and no build step, so it runs directly on GitHub Pages.
 
-**Live demo:** https://<your-username>.github.io/calculator/
+**Live demo:** https://navylokai.github.io/Calculator/
 
 ![Screenshot](screenshot.png)
 
